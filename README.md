@@ -18,19 +18,22 @@ The result is a population-adjusted view of facility access across Nigeria's 36 
 ## Dataset
 
 1. Nigeria Health Facilities (facility-level registry)	Humanitarian Data Exchange (HDX)	
+
 **Source:** https://data.humdata.org/dataset/3b4a119a-309c-4d3f-900f-18a1f6ca2dfa/resource/4658aa59-0554-4fac-8473-377da4b7a0e9/download/nigeriahealthfacilities.csv
 
 2. Nigeria Population by State (2022 projections)	UNFPA, via HDX
+
 **Source:** https://data.humdata.org/dataset/cod-ps-nga
 
-3. Nigeria State Boundaries (for choropleth map)	geoBoundaries, via HDX	
-**Source:** https://data.humdata.org/dataset/geoboundaries-admin-boundaries-for-nigeria
+
 
 
 ## Tools Used
 
 **Python (pandas)**: data cleaning, standardization, exploratory checks
+
 **PostgreSQL**: data storage, aggregation, ranking, and querying
+
 **Power BI**: interactive three-page dashboard and geographic visualization
 
 ## Methodology
