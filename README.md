@@ -2,10 +2,12 @@
 
 
 ## Problem Statement
+
 Nigeria's health facilities are not evenly distributed across the country relative to population, but there is no simple, accessible way to see which states are underserved, since facility data exists only as an unorganized list of individual records with no population context attached. This project cleans and aggregates Nigeria's national health facility registry, combines it with state-level population data, and calculates facility-to-population ratios to identify which states have the lowest access relative to the number of people they serve, in relation to SDG target 3.8 (access to essential healthcare services) and SDG target 3.d (national health system capacity).
 
 
 ## Project Background
+
 Nigeria's health system carries a well documented and widely discussed burden of disease, malaria, maternal and child health challenges, and a growing non-communicable disease load. Far less attention is given to a more basic, structural question underneath all of that: can people actually reach a functioning health facility in the first place?. Health outcomes are shaped not only by disease prevalence but by whether care is physically accessible, and in a country as large and populous as Nigeria, that access is unlikely to be evenly distributed.
 
 This project was built to answer that question directly, using Nigeria's own national health facility registry. The registry itself is a raw, unaggregated list of individual facilities with no population context attached. 
@@ -14,6 +16,7 @@ The result is a population-adjusted view of facility access across Nigeria's 36 
 
 
 ## Dataset
+
 1. Nigeria Health Facilities (facility-level registry)	Humanitarian Data Exchange (HDX)	
 **Source:** https://data.humdata.org/dataset/3b4a119a-309c-4d3f-900f-18a1f6ca2dfa/resource/4658aa59-0554-4fac-8473-377da4b7a0e9/download/nigeriahealthfacilities.csv
 
@@ -25,11 +28,13 @@ The result is a population-adjusted view of facility access across Nigeria's 36 
 
 
 ## Tools Used
-Python (pandas): data cleaning, standardization, exploratory checks
-PostgreSQL: data storage, aggregation, ranking, and querying
-Power BI: interactive three-page dashboard and geographic visualization
+
+**Python (pandas)**: data cleaning, standardization, exploratory checks
+**PostgreSQL**: data storage, aggregation, ranking, and querying
+**Power BI**: interactive three-page dashboard and geographic visualization
 
 ## Methodology
+
 1. Data Import and Initial Exploration
 
 Two datasets were loaded into Python for review:
@@ -60,18 +65,22 @@ Which states have the greatest mismatch between population size and healthcare s
 
 4. Visualization (Power BI)
 
-A three-page interactive dashboard was built: https://app.powerbi.com/view?r=eyJrIjoiOGMwZTUxMmYtYWYzMS00MTk2LThjNjgtNDM2ZmRhYmExNGY0IiwidCI6ImQyNzc2ODVlLTE0YjQtNDRkYi1hMGI1LTI0MTRiYmJmN2YzMCJ9
+A three-page interactive dashboard was built
+**PowerBI Link**: https://app.powerbi.com/view?r=eyJrIjoiOGMwZTUxMmYtYWYzMS00MTk2LThjNjgtNDM2ZmRhYmExNGY0IiwidCI6ImQyNzc2ODVlLTE0YjQtNDRkYi1hMGI1LTI0MTRiYmJmN2YzMCJ9
 
-Overview page
+**Overview page**
+
 <img width="668" height="380" alt="image" src="https://github.com/user-attachments/assets/e6f0b2e6-580b-42f3-add1-d5340c45eb48" />
 
-Most affected states page
+**Most affected states page**
+
 <img width="668" height="379" alt="image" src="https://github.com/user-attachments/assets/d414eb2f-9201-4a93-800f-54988bf4854a" />
 
-Priority states page
+**Priority states page**
+
 <img width="671" height="373" alt="image" src="https://github.com/user-attachments/assets/bd86e4ab-011b-444c-baa5-900d2fac1f8a" />
 
-All visuals are powered by DAX measures built 
+**All visuals are powered by DAX measures built**
 
 
 ## Key Analytical Findings
