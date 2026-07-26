@@ -38,13 +38,14 @@ The result is a population-adjusted view of facility access across Nigeria's 36 
 
 ## Methodology
 
-1. Data Import and Initial Exploration
+**Data Import and Initial Exploration**
 
 Two datasets were loaded into Python for review:
 Nigeria Health Facilities (NHF): 15 columns, including facility ID, name, global ID, alternate name, functional status, facility type (primary, secondary, tertiary), ward code, category (a more detailed facility type description), timestamp of the record, LGA name and code, state name and code, and a reference link (FID).
 Population data: 60 columns, including year (2022), ISO3 country code, country name and code, state name (ADM1_EN) and state code (ADM1_PCODE), total population by sex, and population broken down further by 5-year age bands.
 
-2. Data Cleaning (Python)
+**Data Cleaning (Python)**
+
 Reduced the population dataset to three relevant columns: year, ADM1_EN (renamed to state_name), and T_TL (renamed to total_population).
 Removed the alternate name column and an accessibility-related column from the NHF dataset, both over 90% empty and not relevant to this analysis.
 Verified data types across both datasets.
@@ -53,7 +54,8 @@ Filled blank values in the category column with "Unknown" rather than dropping t
 Standardized state names across both datasets so that every state is spelled identically, enabling a reliable join.
 Exported both cleaned datasets to PostgreSQL for querying.
 
-3. Analysis (SQL)
+**Analysis (SQL)**
+
 Key queries run against the cleaned data in PostgreSQL:
 
 How are health facilities distributed across Nigeria's states relative to their populations?
@@ -66,7 +68,7 @@ Which are the 10 most underserved states based on population per functional heal
 What percentage of Nigeria's total population lives in the 10 most underserved states?
 Which states have the greatest mismatch between population size and healthcare service availability?
 
-4. Visualization (Power BI)
+**Visualization (Power BI)**
 
 A three-page interactive dashboard was built
 **PowerBI Link**: https://app.powerbi.com/view?r=eyJrIjoiOGMwZTUxMmYtYWYzMS00MTk2LThjNjgtNDM2ZmRhYmExNGY0IiwidCI6ImQyNzc2ODVlLTE0YjQtNDRkYi1hMGI1LTI0MTRiYmJmN2YzMCJ9
@@ -88,13 +90,13 @@ A three-page interactive dashboard was built
 
 ## Key Analytical Findings
 
-### How many facilities are functional versus non-functional?
+#### How many facilities are functional versus non-functional?
 Nationally:
 Total facilities: 46,132
 Functional: 34,272 (74.3%)
 Non-functional: 11,860 (25.7%)
 
-### Which states have the highest number of non-functional facilities?
+#### Which states have the highest number of non-functional facilities?
 State includes:
 Adamawa
 Plateau
@@ -102,7 +104,7 @@ Kebbi
 Zamfara
 Taraba
 
-### Which states have large populations but weak facility access?
+#### Which states have large populations but weak facility access?
 States includes:
 Kano
 Kaduna
@@ -110,13 +112,13 @@ Bauchi
 Jigawa
 Rivers
 
-### What is the national population-weighted average facility access?
+#### What is the national population-weighted average facility access?
 Total facilities: 21.28 per 100k
 Functional facilities: 15.81 per 100k
 
 The gap between the two reflects the share of registered facilities that are not operational.
 
-### What share of Nigeria's population lives in the 10 most underserved states?
+#### What share of Nigeria's population lives in the 10 most underserved states?
 37.6% of Nigeria's population, roughly 82 million people.
 
 
